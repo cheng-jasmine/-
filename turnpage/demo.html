@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- 
+        封装一个翻页插件
+        1、明确插件的使用
+        2、明确传入的数据信息
+     -->
+     <div class="demo"></div>
+     <script src="../js/index-jquery.js"></script>
+     <script src="./index.js"></script>
+     <script>
+        $('.demo').page({
+            current: 1,
+            total: 10
+        }) 
+     </script>
+</body>
+</html>

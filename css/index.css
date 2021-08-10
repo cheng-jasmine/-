@@ -1,0 +1,135 @@
+html, body{
+    height: 100%;
+}
+body, dl, dd{
+    margin: 0;
+}
+
+.header{
+    height: 70px;
+    background-color: #354457;
+    line-height: 70px;
+}
+.left-menu {
+    width: 200px;
+    background-color: #4d5e70;
+    float: left;
+    height: calc(100% - 70px);
+}
+.right-content {
+    float: left;
+    width: calc(100% - 200px);
+    height: calc(100% - 70px);
+    background-color: #eee;
+    position: relative;
+    overflow: scroll;
+}
+.header .logo {
+    padding-left: 20px;
+    color: #b3bcb5;
+    font-size: 14px;
+}
+.header .logo img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.left-menu dl {
+    line-height: 40px;
+    font-size: 14px;
+    color: #b3bcc5;
+}
+.left-menu dl dt{
+    padding-left: 10px;
+}
+.left-menu dl dd{
+    padding-left: 40px;
+}
+.left-menu dl dd:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #354457;
+    cursor: pointer;
+}
+.left-menu dl dd.active{
+    background-color: #ddd;
+    color: #354457;
+}
+.right-content .content {
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+.right-content .content.show-content {
+    display: block;
+}
+form {
+    width: 400px;
+    margin: 20px auto;
+}
+form div {
+    margin: 10px 0;
+}
+form div lable:not(.sex) {
+    width: 80px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 10px;
+}
+form .btn {
+    padding: 5px 25px;
+}
+
+.content.student-list table{
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+.student-list thead{
+    background-color: #e3e8ee;
+    color: #646987;
+}
+.student-list tbody{
+    background: #fff;
+}
+.student-list tbody .btn{
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.student-list tbody .btn.edit{
+    background-color: #5cb85c;
+}
+.student-list tbody .btn.remove{
+    background-color: #d9534f;
+}
+
+.dialog {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.dialog.show{
+    display: block;
+}
+.dialog .dialog-content{
+    width: 400px;
+    height: 360px;
+    background-color: #fff;
+    /* position: fixed; js版本使用 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -130px;
+}
+
+.dialog .dialog-content h3{
+    padding-left: 15px;
+}

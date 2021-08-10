@@ -1,0 +1,16 @@
+.my-page li{
+    list-style: none;
+    float: left;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.my-page span{
+    float: left;
+}
+.my-page li.my-page-current{
+    background-color: #428bca;
+    color: #fff;
+}

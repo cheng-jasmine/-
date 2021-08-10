@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <form action="" id="loginForm">
+        <div>
+            <label for="account">账号</label>
+            <input type="text" name="account">
+        </div>
+        <div>
+            <label for="password">密码</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <button id="submit">提交</button>
+            <button id="zuce">注册</button>
+        </div>
+    </form>
+
+    <script src="./js/index-jquery.js"></script>
+    <script>
+        $('#submit').click(function (e) {
+            e.preventDefault();
+            var data = $('#loginForm').serialize();
+            data += '&appkey=Jasmine_1603453921876';
+            $.ajax({
+                url: 'http://open.duyiedu.com/api/student/stuLogin',
+                type: 'POST',
+                data: data,
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                    if (res.status === 'success') {
+                        sessionStorage.setItem('studentMessageId', data);
+                        location.href = './index.html';
+                    }
+                }
+            });
+        });
+
+        $('#zucu').click(function (e) {
+            e.preventDefault();
+            var data = $('#loginForm').serialize();
+        })
+    </script>
+</body>
+</html>
